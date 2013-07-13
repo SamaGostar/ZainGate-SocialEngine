@@ -36,5 +36,5 @@ array(
 					'CallbackURL' 	=> $callBackUrl
 					)
 ) );
-header('Location: https://www.zarinpal.com/pg/StartPay/'.$res['Authority'] . "/ZarinGate");
+header('Location: https://www.zarinpal.com/pg/StartPay/'.$res->Authority . "/ZarinGate");
 ?>
