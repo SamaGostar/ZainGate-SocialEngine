@@ -36,5 +36,10 @@ array(
 					'CallbackURL' 	=> $callBackUrl
 					)
 ) );
-header('Location: https://www.zarinpal.com/pg/StartPay/'.$res->Authority . "/ZarinGate");
+if($res->Status == 100)
+{
+	header('Location: https://www.zarinpal.com/pg/StartPay/'.$res->Authority . "/ZarinGate");
+}else{
+	echo'ERR: '.$res->Status;
+}
 ?>
