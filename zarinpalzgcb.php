@@ -49,7 +49,8 @@ if ($res->Status =="100") {
 }
 if ($res->Status != 100) {
 	//mysql_query("UPDATE `engine4_users` SET  `enabled` = '1' WHERE `user_id`='$uid'");
-      header('Location: '.$url.'/payment/subscription/finish/state/failed');
+	echo'ERR: '.$res->Status;
+	 header('Location: '.$url.'/payment/subscription/finish/state/failed');
 
 }
 ?>
